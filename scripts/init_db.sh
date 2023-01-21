@@ -15,7 +15,7 @@ echo >&2 "to install it."
 exit 1
 fi
 DB_USER=${POSTGRES_USER:=postgres}
-DB_PASSWORD="${POSTGRES_PASSWORD:=password}"
+DB_PASSWORD="${POSTGRES_PASSWORD:=postgres}"
 DB_NAME="${POSTGRES_DB:=newsletter}"
 DB_PORT="${POSTGRES_PORT:=5432}"
 # Allow to skip Docker if a dockerized Postgres database is already running
@@ -39,3 +39,4 @@ export DATABASE_URL=postgres://${DB_USER}:postgres@localhost:${DB_PORT}/${DB_NAM
 sqlx database create
 sqlx migrate run
 >&2 echo "Postgres has been migrated, ready to go!"
+                                                          2qwsbdcv bn              
