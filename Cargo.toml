@@ -24,7 +24,9 @@ hyper = "0.13.0-alpha.4"
 tokio = {version = "1", features = ["full"]}
 pretty_env_logger = "0.3.1"
 serde = { version = "1", features = ["derive"]}
-config = "0.11"
+config = { version = "0.13", default-features = false, features = ["yaml"] }
+uuid = { version = "0.8.1", features = ["v4"] }
+chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
 
 
 # Using table-like toml syntax to avoid a super-long line!
